@@ -1,4 +1,7 @@
-# CRUD para a entidade "Clientes" usando o framework Laravel
+
+# Ganymede
+
+<p align="right"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="150" alt="Laravel Logo"></a></p>
 
 Neste documento, serão apresentados os passos para rodar a aplicação utilizando o framework Laravel. A entidade terá os seguintes campos: nome, email, telefone e endereço, e os dados serão armazenados em um banco de dados SQLite.
 
@@ -16,6 +19,7 @@ Para seguir este guia, é necessário ter instalado:
 O primeiro passo é clonar este repositório do github. Para isso, abra o terminal e execute o seguinte comando:
 
 > OBS: `C:\www` é o caminho para onde você quer clonar o repo, porém pode ser alterado
+
 ```shell
 git clone https://github.com/FelipeRodrigues05/Ganymede.git C:\www
 ```
@@ -33,6 +37,7 @@ composer install
 Por padrão o APP usa SQLite, porém você pode utilizar outros indo no arquivo .env e digitando isso:
 
 > OBS: Esses dados fornecidos são apenas exemplos
+
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -49,4 +54,5 @@ Agora vá no terminal e digite isso:
 ```shell
 php artisan serve
 ```
+
 
