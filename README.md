@@ -61,4 +61,4 @@ Agora vá no terminal e digite isso:
 php artisan serve
 ```
 
-
+Recebido o Projeto e baixado por @DuilioFanton dia 2023/03/13 às 10:01:04
