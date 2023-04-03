@@ -24,7 +24,13 @@ O primeiro passo é clonar este repositório do github. Para isso, abra o termin
 git clone https://github.com/FelipeRodrigues05/Ganymede.git C:\www
 ```
 
-### Passo 2: Instalar as Dependências necessárias
+### Passo 2: Ir até a pasta onde o repositório foi clonado
+
+```shell
+cd C:\www
+```
+
+### Passo 3: Instalar as Dependências necessárias
 
 Agora é necessário instalar as dependências do PHP utilizadas
 
@@ -32,7 +38,7 @@ Agora é necessário instalar as dependências do PHP utilizadas
 composer install
 ```
 
-### Passo 3: Configurar o Banco de Dados
+### Passo 4: Configurar o Banco de Dados
 
 Por padrão o APP usa SQLite, porém você pode utilizar outros indo no arquivo .env e digitando isso:
 
@@ -47,7 +53,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### Passo 4: Rodar a Aplicação
+### Passo 5: Rodar a Aplicação
 
 Agora vá no terminal e digite isso:
 
