@@ -17,6 +17,13 @@ class ClientController extends Controller
         return ClientResource::collection($clients);
     }
 
+    public function listOneClient(string $id)
+    {
+        $client = Client::findOrFail($id);
+
+        return new ClientResource($client);
+    }
+
     // REQUESTCLIENTRULES faz parte da validação dos dados
     public function createClient(RequestClientRules $request)
     {

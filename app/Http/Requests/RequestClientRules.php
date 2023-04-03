@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class RequestClientRules extends FormRequest
 {
@@ -21,15 +22,21 @@ class RequestClientRules extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'name' => 'required',
-            'email' => [
-                'required',
-                'email',
-                'unique:clients'
-            ],
+            'email' => 'required | email | unique:clients',
             'phone' => 'required',
             'address' => 'required'
         ];
+
+        if ($this->method() === 'PUT') {
+            $rules['email'] = [
+                'required',
+                'email',
+                Rule::unique('clients')->ignore($this->id)
+            ];
+        }
+
+        return $rules;
     }
 }
